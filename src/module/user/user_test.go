@@ -57,12 +57,12 @@ func TestGetProfile_Success(t *testing.T) {
 		UserType:  "ADMIN",
 	}
 
-	mockService.On("GetProfile", "b7f85008-6207-41cb-b79a-47ef7eee204b").Return(mockUser, nil)
+	mockService.On("GetProfile", uid).Return(mockUser, nil)
 
 	w := httptest.NewRecorder()
 	c, _ := gin.CreateTestContext(w)
 	c.Request, _ = http.NewRequest("GET", "/user/profile", nil)
-	c.Set("user_id", "b7f85008-6207-41cb-b79a-47ef7eee204b")
+	c.Set("user_id", uid)
 
 	controller.GetProfile(c)
 
