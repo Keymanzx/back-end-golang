@@ -44,8 +44,27 @@ This project is a Go-based backend application designed to provide a robust and 
    - `make test`: Runs the test suite.
    - `make clean`: Cleans up build artifacts.
    - `make run`: Runs the application locally without Docker.
+   - `make swagger`: Generates the Swagger documentation for the API.
    
    To execute a make command, use:
    ```bash
    make <target>
    ```
+
+   ### Using Swagger
+
+   Swagger is a tool that helps in creating interactive API documentation, making it easier for developers to test and understand the API.
+
+   1. **Generate Swagger Documentation**:
+      - Use the command `make swagger` to generate Swagger documentation for your API.
+      - This command will create Swagger documentation files in JSON or YAML format that can be used with Swagger UI.
+
+   2. **Open Swagger UI**:
+      - After generating the Swagger documentation, you can use Swagger UI to view and test the API.
+      - Open a browser and go to `http://localhost:8000/swagger/index.html` to access Swagger UI.
+
+   3. **Test the API**:
+      - In Swagger UI, you can view details of each API endpoint, including required parameters and response examples.
+      - You can test the API directly from Swagger UI by filling in the necessary information and clicking the "Execute" button.
+
+   Using Swagger makes API development and testing efficient and straightforward.

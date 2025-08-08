@@ -1,3 +1,8 @@
+// @title Go Backend API
+// @version 1.0
+// @description This is the API documentation for Go Backend
+// @host localhost:8000
+// @BasePath /api/v1
 package main
 
 import (

@@ -1,4 +1,4 @@
-.PHONY: run dev build test docker-up docker-down docker-restart lint
+.PHONY: run dev build test docker-up docker-down docker-restart lint swagger
 
 APP_NAME=main
 
@@ -31,3 +31,7 @@ docker-restart:
 # 6. Clean build file
 clean:
 	rm -f $(APP_NAME)
+
+# 7. Generate Swagger documentation
+swagger:
+	swag init -g main.go -o docs

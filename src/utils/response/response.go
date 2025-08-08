@@ -18,3 +18,9 @@ func Error(c *gin.Context, code int, err string) {
         "message": err,
     })
 }
+
+
+type ErrorResponse struct {
+    Status  string `json:"status"`
+    Message string `json:"message"`
+}
